@@ -1,0 +1,215 @@
+:root {
+  --main-bg-color: #000;
+  --text-color: #fff;
+  --font-size: small;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: url('../images/AndreaR.PNG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+.scroll-container {
+  display: flex;
+  flex-direction: row; /* Asegura que el desplazamiento sea horizontal */
+  height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+
+.scroll-item {
+  flex: 0 0 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column; /* Organiza contenido vertical dentro de la sección */
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  color: var(--text-color);
+}
+
+.text {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.sticky-col {
+  top: 0;
+  left: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  text-align: justify;
+  font-size: var(--font-size);
+}
+
+.img-fluid {
+  max-width: 73%;
+  height: auto; /* Mantiene la relación de aspecto */
+  object-fit: contain; /* Ajusta la imagen sin recortarla */
+}
+
+/* Primera sección */
+
+/* Segunda sección */
+
+/* Tercera sección */
+
+/* Cuarta sección */
+
+/* Quinta  sección */
+
+/* Sexta sección */
+
+/* Séptima sección */
+
+/* Octaba sección */
+.carousel-inner img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.carousel {
+  max-width: 100%;
+  /* Limita el ancho máximo del carrusel */
+}
+
+/* Novena sección */
+.novenaseccion {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  color: white;
+}
+
+/* Ajuste de las filas */
+.novenaseccion .row {
+  height: fit-content;
+  margin-bottom: 5%;
+}
+
+/* Décima sección */
+/* Estilo del formulario de comentarios */
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 1;
+  width: 100%;
+  /* Ajusta el ancho del formulario para que ocupe todo el espacio disponible */
+}
+
+.comment-form label {
+  margin-bottom: 8px;
+  color: white;
+  font-size: 0.5em;
+}
+
+.comment-form input,
+.comment-form textarea {
+  margin-bottom: 5px;
+  padding: 2px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.5em;
+  width: 100%;
+  /* Ajusta el ancho de los campos de texto */
+}
+
+.comment-form input[name="name"],
+.comment-form input[name="email"] {
+  width: 100%;
+  /* Incrementa el ancho de los campos de nombre y correo */
+}
+
+.comment-form textarea {
+  width: 100%;
+  /* El textarea se mantiene al 100% */
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus {
+  outline: none;
+  border: 1px solid #350200;
+}
+
+.comment-form button {
+  align-self: flex-end;
+  padding: 4px 8px;
+  background-color: #350200;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 0.5em;
+  cursor: pointer;
+}
+
+.comment-form button:hover {
+  background-color: #6d0000;
+}
+
+/* Undécima sección */
+.rrss {
+  margin-top: 100px;
+}
+
+/* Detectar orientación y mostrar aviso */
+
+.rotate-device-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 1.2em;
+  border-radius: 8px;
+  display: none;
+}
+
+/* Desplazamiento vertical en dispositivos móviles: */
+@media screen and (max-width: 768px) {
+  .scroll-container {
+    display: flex;
+    flex-direction: column; 
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .scroll-item {
+    flex: 0 0 100vh; /* Desplazamiento vertical en dispositivos móviles: */
+  }
+}
+
+/* Desplazamiento horizontal en dispositivos móviles: */
+@media screen and (orientation: portrait) {
+  .rotate-device-message {
+    display: block;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .rotate-device-message {
+    display: none;
+  }
+}
